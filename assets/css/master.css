@@ -1,28 +1,40 @@
+/*proprietà generli*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  font-family: 'Fredoka One', cursive;
 }
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+/* sezione nav */
 nav {
   width: 100vw;
+  height: 90px;
+  z-index: 1;
   position: fixed;
 }
+/* dimensioni sezioni R G Y */
 section {
   width: 100vw;
   height: 100vh;
+  position: relative;
 }
+/* sposto i pulsanti */
 .col {
   position: absolute;
   right: 0;
   padding-right: 100px;
   padding-top: 50px;
 }
+/* comportamento link */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+nav span:hover {
+  color: #9A29FF;
+  cursor: pointer;
+}
+/* definizione pulsanti */
 nav .col span {
   border-radius: 50%;
   display: inline-block;
@@ -33,7 +45,25 @@ nav .col span {
   margin-right: 15px;
   padding-top: 3px;
   font-size: 30px;
+}
+/* sezione immagine e testo */
+.content {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
+}
+.content-text {
+  color: #ff0;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* utility test e background sezioni */
+.bg-yellow .content-text {
+  color: #008000;
 }
 .bg-red {
   background-color: #f00;
